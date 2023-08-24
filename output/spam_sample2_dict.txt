@@ -1,0 +1,74 @@
+{
+  "Delivered-To": "tester.email@gmail.com",
+  "Received": [
+    "from 196.120.94.180 ([196.120.134.202]) by mail.gmx.net (mrgmx005 [212.227.17.190]) with ESMTPSA (Nemesis) id 1Mlf4S-1pzsdz3f0M-00iimR for <tester.email@gmail.com>",
+    "Sun, 30 Jul 2023 02:08:46 +0200"
+  ],
+  "X-Google-Smtp-Source": "APBJJlHjr36xE5u9R1coLTWcSBrEaQtLMMQpCkNiAZuP0LP00xcd6e1nyPc1KXcpSYwTJEZmjW9A",
+  "X-Received": [
+    "by 2002:a5d:6352:0:b0:315:9362:3c70 with SMTP id b18-20020a5d6352000000b0031593623c70mr4258465wrw.60.1690675726752",
+    "Sat, 29 Jul 2023 17:08:46 -0700 (PDT)"
+  ],
+  "ARC-Seal": {
+    "i": "1",
+    "a": "rsa-sha256",
+    "t": "1690675726",
+    "cv": "none",
+    "d": "google.com",
+    "s": "arc-20160816",
+    "b": "SpL6vUtHva13x5Q7ojDkd+De7I+LPvHQlfXYEU7FI5AfnuJIBWGKBbFY3NcaD+z2TJLHkLiDTaGwo+fv/efowrYLcZlXSHToFWIuL3b8CkIzT49c/xlphS2n/8JPe28w10Ni0CDtIRDFeORDU2fpPVj6UgwJJLuCFjI7eJ7WD7LmRIWBw+15vxjI56QLKp6mlnIhfpQ1wYxADshiyRqDBHH/NwH9mkfiSsOiNd1XVOyNCXMoCMCKVqRqh6nxHoG99L/xh1RLJ+sffjn+V7Iwev2ZDabfZ3HhgNU9H3ys/3NjAQMQ9t4RM0SesiXkYRmtFxLrKdah7ggrQVzCLzmOtw=="
+  },
+  "ARC-Message-Signature": {
+    "i": "1",
+    "a": "rsa-sha256",
+    "c": "relaxed/relaxed",
+    "d": "google.com",
+    "s": "arc-20160816",
+    "h": "ui-outboundreport:message-id:date:reply-to:content-transfer-encoding:mime-version:to:subject:from:dkim-signature",
+    "bh": "PgWWXUvKyrZc2PRxFr+xB8wzMLUlYSaOHzYJFSzYkYM=",
+    "fh": "meRC/jkFxIXdRpRDaUjwtsWbbehnHZI7wMXw6YH1C4A=",
+    "b": "H1w8pfXLIczcJKZeQGaGsCmm3b/+4dZRxvsE/MkliTYfuGSs+mJeb6N/p03yT9ltS6bspwox3YNaRyMTNeowiVEU7S6DxypCJvIRiUOjppA0d3OSZ/Cv5VFcxzqn9JHgqA+VdBZhV7BCucpnFaSRfS3PEZk2rKjv2wOos2gNmSBAmrk6Rerr0lofWHvJwyf6BlntE2hSaPbNtmAtVaqej4ywFW8+0xyxrrsgPGl5EuP/zLQr9HWHJNK4TP4xOZVryzUwYDFA59WkYSjIDBob8Z8PPJECgN5L0Vr16XA5tHU/bcXDhITBcBO4z5grPVs2NbQ8QQlOptRpMAXKy4dBZg=="
+  },
+  "ARC-Authentication-Results": {
+    "i": "1",
+    "dkim": "pass header.i=@gmx.de header.s=s31663417 header.b=LDsYFEaa",
+    "spf": "pass (google.com: domain of islaramacey8174@gmx.de designates 82.165.159.12 as permitted sender) smtp.mailfrom=islaRamacey8174@gmx.de",
+    "dmarc": "pass (p=NONE sp=NONE dis=NONE) header.from=gmx.de"
+  },
+  "Return-Path": "<islaRamacey8174@gmx.de>",
+  "Received-SPF": "pass (google.com: domain of islaramacey8174@gmx.de designates 82.165.159.12 as permitted sender) client-ip=82.165.159.12;",
+  "Authentication-Results": {
+    "dkim": "pass header.i=@gmx.de header.s=s31663417 header.b=LDsYFEaa",
+    "spf": "pass (google.com: domain of islaramacey8174@gmx.de designates 82.165.159.12 as permitted sender) smtp.mailfrom=islaRamacey8174@gmx.de",
+    "dmarc": "pass (p=NONE sp=NONE dis=NONE) header.from=gmx.de"
+  },
+  "DKIM-Signature": {
+    "v": "1",
+    "a": "rsa-sha256",
+    "c": "relaxed/simple",
+    "d": "gmx.de",
+    "s": "s31663417",
+    "t": "1690675726",
+    "x": "1691280526",
+    "i": "islaramacey8174@gmx.de",
+    "bh": "PgWWXUvKyrZc2PRxFr+xB8wzMLUlYSaOHzYJFSzYkYM=",
+    "h": "X-UI-Sender-Class:From:Subject:To:Reply-To:Date",
+    "b": "LDsYFEaa73kuqalMOybQB9W+IFf7xeassYNm+jEDpNSJ9CbZwRt1WjC1SGJYve1PJnVXBBM iiF0IFSqsniC5IYQxII/SgV3i3LpaR7+ySqKwtk2IzI7QCSS0gqqtRGnDrQukQfpav2C7EjDI s3u4EDuIgslnWDuIIM/uXSfSRbvf9RsEMN/d8HLhHBouCiFNwZRVYe1jYX1CTIIMj+fI3/ei+ dn6xf4FUqJJB4wtaR9BPLM2xnJgzFkx1Vqk5w6cJg10t1mLazrF5j9cTR7n4+iAqk290dxNnq iXkoAyy96I5+665IWrDKhr5l43RM1+Y1Etf82b2KnaM3C80twxGg=="
+  },
+  "X-UI-Sender-Class": "724b4f7f-cbec-4199-ad4e-598c01a50d3a",
+  "From": "IPTV SMARTER PRO <islaRamacey8174@gmx.de>",
+  "Subject": "This offer gives you IP TV at a great price",
+  "To": "tester.email <tester.email@gmail.com>",
+  "Content-Type": {
+    "charset": "utf-8"
+  },
+  "MIME-Version": "1.0",
+  "Content-Transfer-Encoding": "quoted-printable",
+  "Reply-To": "IPTV SMARTER PRO <adilouzougat@gmail.com>",
+  "Date": "Sun, 30 Jul 2023 02:08:45 +0200",
+  "Message-ID": "<1MQe9s-1qCF1U0vh8-00Nk47@mail.gmx.net>",
+  "X-Provags-ID": "V03:K1:h6LUyns7yVM/N9IKl+6Mr06mV7vOKOmQur3sGHg0nRyy+y9MOb1 2wp6OmSVlzf/1K4WXY2pHPksZ+5y9KArMLUkeEPJMwwEbD7fIdMS+wPb4m34jTkEH3QCVuP coxhX2IVa5hnHXXy/PaQp1QkmCY1aKB7aa835dj0hzHVd44UESOGlnGVD9EBdIblkzlHEHR BGt5ItPrGsV/tYJrY2b2A==",
+  "X-Spam-Flag": "YES",
+  "UI-OutboundReport": "junk:10;M01:P0:8aGJKVnuF9Q=;dE6mo6lZoSgwjwUyaPrTB6s57+MA7 CUml1cMA4Ec5E8GPGLMvrZCXYSUZlFpKGFSU2ruIYQj7gxslBOAQDFucrrhlJgK7bOXtWK833 RxyYCkn6INTgvhLHM7TQbGUB4L48m0jg31ui2MYM7UVSRJMvlSASnUVXEovTaspYbcGYJBdhW Ul6FNvmtq6sYFcZg/1MUh7mh5DevF0xXEy07PqqEEbl151owOg3ks3FjvNmMZP050sD3fksOV nXvrYPsvljucDv4qPO5KdywdWHm0mrruxu6Iv4QFWu4Z5ERn7A67UDKmNMMKFFbhO0HjZaCZ7 miGSh7alDViY0Wt6WdJzzJM5DPg9o4sBcbQam1V9MBP0cpIzkGOYH/oRegrvikqcMKCSBEE9m LZ6MK0maz56QA8cCVpvptKMBAlkqsRTSiugSW3QTt7mx1X6s4DzGOB2VoGoLrqVQ1RuuTkMQA zwdkWSCpRsYOfpY65lyMPQRgpC+DHJn6UgYA3W4AH4u/i4MGFQtZXKFGbKD1wvOQpNjy1Luje vSEmFHhWYci4SX1pKi2Wn3uDso8KG+kuCfs2FVU9fKr2CZNyzjod4qdb4KwC40v1FZtQD+mfP nTmQ9kQKuqRBck878jzFDUNDyWpv+mwyKTc/KqjIE85AzuY4U7Lk3l6goFjObAR1FRIQxfjuE PV/RtAFML3D6ahsAKzGBn0IevQoO12cnhwsszKgsnN1BHQAoo1OOnjbcdMVnbK4+28ifuT8Uz Wkluua1Cz1SVnLdI4a0renr0OiwITXUang1iGMmfbAjaLfv8LUChPAlw/J7AE5uf932qs25fz 7vNMpAZiKD/e650hU+Wfdmo7dWX7//MKImE0gPwgGNwy8p+cmZRtFku7klbUTsSlnTGFothNU L93+GY+RiYRMjXlrP7pad2qCe6ll11Q+GYd5MDW10wSTPWavcPcXNXqLh4agDCMPHUz8Bbf6V NBCq+T8V7ahj1S2tJgE5z6C9OGbHLfBqqWs5fStcnUf1adtDalDdff85NhbnZBWc9BfLSid/F RkBIUmKJN2Xf5usylLkuOJeMUwEnPQoGwvhJt",
+  "Content": "IPTV service.\n\nWould you like to pay less and watch more than 17,000 channels worldwide?\n\n* SPORTS CHANNEL [Bein Sports. Sky Sports. NFL. Formula 1 ...]\n\n* SERIES CHANNELS [ Netflix . hulu Amazon Prime. apple tv ...]\n\n* MOVIE CHANNELS [ Oppenheimer . Fast & Furious X.Barbie 2023...]\n\n* DOCUMENTARY CHANNELS [National Geographic . Free documentary...]\n\n* NEWS CHANNEL [ Euronews . BBC . Sky News...]\n\n* ALL OTHER CHANNELS...\n\nContact us on our website:\n\nIngoads.net\n\nhttps://wa.me/212667763719"
+}

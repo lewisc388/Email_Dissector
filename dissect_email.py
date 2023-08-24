@@ -8,7 +8,11 @@ unprocessed_data = []
 processed_data = {}
 sourcefile = ""
 outputfile = "output\output.txt"
-parser = argparse.ArgumentParser(description="", exit_on_error=True, add_help=True)
+desc = '''
+Dissect Email processes Original Email Messages into a usable dictionary format.
+This allows for easy lookups of flags and the ability to integrate with automations and scripts.
+'''
+parser = argparse.ArgumentParser(description=desc, exit_on_error=True, add_help=True)
 
 # ---------------[Define Parser Flags]---------------
 parser.add_argument("-f", "--filename", required=True, 
@@ -17,7 +21,7 @@ parser.add_argument("-f", "--filename", required=True,
                   )
 parser.add_argument("-o", "--output", 
                     dest="outputfile",
-                    help=f"Output destination (.txt or .csv). Default: {outputfile}"
+                    help=f"Output destination (.txt). Default: {outputfile}"
                   )
 
 
@@ -128,7 +132,7 @@ for entry in step2_processed:
     key = entry[:index].strip()
     value_str = entry[index + 1:].strip()
 
-    if "; " in value_str:
+    if "; " in value_str and key != "Content":
       sub_dict = {}
       value_list = value_str.split("; ")
 
